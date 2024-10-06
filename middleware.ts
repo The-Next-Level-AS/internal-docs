@@ -14,14 +14,8 @@ export function middleware(request: NextRequest) {
   
   const authHeader = request.headers.get('authorization'),
     base64Credentials = authHeader.split(' ')[1],
-    credentials = Buffer.from(base64Credentials, 'base64').toString('ascii'),
+    credentials = atob(base64Credentials),
     [username, password] = credentials.split(':');
-
-  if (!authHeader)
-    return new NextResponse(null, {
-      status: 401,
-      headers: { 'WWW-Authenticate': 'Basic realm="Secure Area"' },
-    });
   if (username === USERNAME && password === PASSWORD)
     return NextResponse.next();
   
