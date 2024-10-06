@@ -11,14 +11,14 @@ export function middleware(request: NextRequest) {
     [username, password] = credentials.split(':');
 
   if (!authHeader)
-    return new NextResponse('Unauthorized', {
+    return new NextResponse(null, {
       status: 401,
       headers: { 'WWW-Authenticate': 'Basic realm="Secure Area"' },
     });
   if (username === USERNAME && password === PASSWORD)
     return NextResponse.next();
   
-  return new NextResponse('Unauthorized', {
+  return new NextResponse(null, {
     status: 401,
     headers: { 'WWW-Authenticate': 'Basic realm="Secure Area"' },
   });
