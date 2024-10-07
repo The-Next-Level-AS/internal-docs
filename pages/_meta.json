@@ -1,5 +1,7 @@
 {
   "index": "Introduction",
+  "concepts": "Concepts test",
+  "gettingStarted": "Getting started",
   "about": {
     "title": "About",
     "type": "page"
