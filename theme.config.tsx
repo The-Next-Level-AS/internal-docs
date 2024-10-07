@@ -1,8 +1,5 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
-import Image from "next/image";
-
-import logo from "logo.svg";
 
 const config: DocsThemeConfig = {
   logo: (
