@@ -29,6 +29,11 @@ const config: DocsThemeConfig = {
   },
   feedback: { content: null },
   editLink: { component: null },
+  head: (
+    <>
+      <meta property="og:title" content="NXTL Documentation Portal" />
+    </>
+  ),
 };
 
 export default config;
