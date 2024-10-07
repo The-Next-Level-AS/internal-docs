@@ -2,6 +2,6 @@
   "generativeUI": "Generative UI",
   "userJourneyDefinition": "User Journey Definition",
   "userSignal": "User Signal",
-  "template": "Template",
-  "LLMPromptPrimitives": "LLM Prompt Primitives"
+  "userJourneyStepTemplate": "User Journey Step Template",
+  "LLMPromptPrimitive": "LLM Prompt Primitive"
 }
