@@ -1,6 +1,7 @@
 {
   "index": "Introduction",
   "concepts": "Concepts",
+  "gettingStarted": "Getting started",
   "about": {
     "title": "About",
     "type": "page"
