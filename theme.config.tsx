@@ -28,10 +28,10 @@ const config: DocsThemeConfig = {
     text: "The Next Level AS",
   },
   feedback: { content: null },
-  editLink: { component: null },
+  editLink: { component: () => null },
   head: (
     <>
-      <meta property="og:title" content="NXTL Documentation Portal" />
+      <title>NXTL Documentation Portal</title>
     </>
   ),
 };
