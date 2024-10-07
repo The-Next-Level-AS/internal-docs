@@ -3,5 +3,5 @@
   "userJourneyDefinition": "User Journey Definition",
   "userSignal": "User Signal",
   "template": "Template",
-  "promptPrimitives": "Prompt Primitives"
+  "LLMPromptPrimitives": "LLM Prompt Primitives"
 }
