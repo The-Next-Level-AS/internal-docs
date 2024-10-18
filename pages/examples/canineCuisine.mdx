@@ -6,18 +6,124 @@ import { Cards } from "nextra/components";
 
 In this example, we'll set up an NXTL-instance that will **manifest as a website** providing **information on dog food** (“Canine Cuisine”) in a way that **dynamically adapts** to the individual user.
 
-The goal is to fascilitate individualization across **types of dog owners** and **their dogs’ needs**. Since we're dealing with a **large variety** of **dog breeds**, individualization becomes a **complex issue**. Were we to solve this **manually**, we'd have to create **a lot** of specialized user interfaces, as well as make sure users were **correctly matched up** with the optimal interface.
+The goal is to fascilitate individualization across **types of dog owners** and **their dogs’ needs**. Since we're dealing with a **large variety** of **dog breeds**, individualization becomes a **complex issue**. If we were to solve this **manually**, we'd have to create **a lot** of specialized user interfaces, as well as make sure users were **correctly matched up** with the optimal interface.
 
 With NXTL, this kind of individualization is **automated** and **abstracted** away. We can concentrate on **higher level** matters like: mapping out the **user journeys**, connecting the **right datasets**, and specifying the **signals** that we want to pick up from the user in order to serve them their **generative user experiences**.
 
-## Preparing datasets and integrations
+We start by creating a **new project** from the NXTL dashboard:
+
+<br />
+<div
+  style={{
+    background: "#80808080",
+    borderRadius: "8px",
+    width: "512px",
+    aspectRatio: "16/9",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  [TODO: Screenshot of **New project** form]
+</div>
+
+This opens up the **Project dashboard** view:
+
+<br />
+<div
+  style={{
+    background: "#80808080",
+    borderRadius: "8px",
+    width: "512px",
+    aspectRatio: "16/9",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  [TODO: Screenshot of **Project dashboard**]
+</div>
+
+## Adding data sources
 
 We have two datasets on hand:
 
 - A set of articles on the topics of canine **health** and **diets**
 - A dataset of **dog breeds**
 
-Furthermore, we have access to an **ecommerce-API** providing affiliate links to popular dog food products.
+Furthermore, we have access to an **ecommerce-API** providing means of creating our own affiliate links to popular dog food products.
+
+To start adding data, we click **Add data source**, which opens up the **Data source dialog**.
+
+The article dataset consists of one hundred Markdown-formatted (.md) files. We drag-and-drop those in, give the data source a **unique** name (like `dog_articles`) and click **Submit**:
+
+<br />
+<div
+  style={{
+    background: "#80808080",
+    borderRadius: "8px",
+    width: "512px",
+    aspectRatio: "16/9",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  [TODO: Screenshot of **Data source dialog** for article dataset]
+</div>
+
+NXTL will now proceed to **process** the dataset in the background. We will be **notified** when it is ready. In the **meantime**, we can continue adding data.
+
+Next up is the dog breeds dataset. This comes in the form of an SQL-database dump. We click **Add data source** again, drag-and-drop our file, name the data source `dog_breeds` and submit:
+
+<br />
+<div
+  style={{
+    background: "#80808080",
+    borderRadius: "8px",
+    width: "512px",
+    aspectRatio: "16/9",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  [TODO: Screenshot of **Data source dialog** for dog breeds dataset]
+</div>
+
+Finally, we add the API-integration by clicking **Add data source** and filling out the **API-related fields**, before submitting:
+
+<br />
+<div
+  style={{
+    background: "#80808080",
+    borderRadius: "8px",
+    width: "512px",
+    aspectRatio: "16/9",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  [TODO: Screenshot of **Data source dialog** for API-integration]
+</div>
+
+We now have all our data sources in place, and can keep track of them from the dashboard pane named **Data sources**:
+
+<br />
+<div
+  style={{
+    background: "#80808080",
+    borderRadius: "8px",
+    width: "512px",
+    aspectRatio: "16/9",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  [TODO: Screenshot of **Data sources**]
+</div>
 
 ## Specifying user journeys
 
