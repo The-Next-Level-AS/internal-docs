@@ -13,36 +13,12 @@ With NXTL, this kind of individualization is **automated** and **abstracted** aw
 We start by creating a **new project** from the NXTL dashboard:
 
 <br />
-<div
-  style={{
-    background: "#80808080",
-    borderRadius: "8px",
-    width: "512px",
-    aspectRatio: "16/9",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }}
->
-  [TODO: Screenshot of **New project** form]
-</div>
+<div className="img">[TODO: Screenshot of **New project** form]</div>
 
-This opens up the **Project dashboard** view:
+This launches the **Project dashboard** view:
 
 <br />
-<div
-  style={{
-    background: "#80808080",
-    borderRadius: "8px",
-    width: "512px",
-    aspectRatio: "16/9",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }}
->
-  [TODO: Screenshot of **Project dashboard**]
-</div>
+<div className="img">[TODO: Screenshot of **Project dashboard**]</div>
 
 ## Adding data sources
 
@@ -53,22 +29,12 @@ We have two datasets on hand:
 
 Furthermore, we have access to an **ecommerce-API** providing means of creating our own affiliate links to popular dog food products.
 
-To start adding data, we click **Add data source**, which opens up the **Data source dialog**.
+To start adding data, we click **Add data source**, which launches the **Data source dialog**.
 
 The article dataset consists of one hundred Markdown-formatted (.md) files. We drag-and-drop those in, give the data source a **unique** name (like `dog_articles`) and click **Submit**:
 
 <br />
-<div
-  style={{
-    background: "#80808080",
-    borderRadius: "8px",
-    width: "512px",
-    aspectRatio: "16/9",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }}
->
+<div className="img">
   [TODO: Screenshot of **Data source dialog** for article dataset]
 </div>
 
@@ -77,60 +43,49 @@ NXTL will now proceed to **process** the dataset in the background. We will be *
 Next up is the dog breeds dataset. This comes in the form of an SQL-database dump. We click **Add data source** again, drag-and-drop our file, name the data source `dog_breeds` and submit:
 
 <br />
-<div
-  style={{
-    background: "#80808080",
-    borderRadius: "8px",
-    width: "512px",
-    aspectRatio: "16/9",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }}
->
+<div className="img">
   [TODO: Screenshot of **Data source dialog** for dog breeds dataset]
 </div>
 
-Finally, we add the API-integration by clicking **Add data source** and filling out the **API-related fields**, before submitting:
+Finally, we add the API-integration by clicking **Add data source**. We name it `dog_food_links` and fill out the **API-related fields**, before submitting:
 
 <br />
-<div
-  style={{
-    background: "#80808080",
-    borderRadius: "8px",
-    width: "512px",
-    aspectRatio: "16/9",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }}
->
+<div className="img">
   [TODO: Screenshot of **Data source dialog** for API-integration]
 </div>
 
-We now have all our data sources in place, and can keep track of them from the dashboard pane named **Data sources**:
+We now have all our data sources in place, and can keep track of them from the **Data sources** dashboard pane:
 
 <br />
-<div
-  style={{
-    background: "#80808080",
-    borderRadius: "8px",
-    width: "512px",
-    aspectRatio: "16/9",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }}
->
-  [TODO: Screenshot of **Data sources**]
-</div>
+<div className="img">[TODO: Screenshot of **Data sources** dashboard pane]</div>
 
 ## Specifying user journeys
 
-In doing research, we've identified **three fundamental user journeys**, covering the distinct needs and interactions of various user types:
+In doing our dog food research, we've identified **three fundamental user journeys**, covering the distinct needs and interactions of various user types:
 
 - **New** dog owners seeking **information**
 - **Existing** dog owners looking for **alternatives**
 - **Health-conscious** owners seeking **specialized** diets
 
-[TODO]
+To set up our first user journey, we click **Add user journey** from the **Project dashboard**. This will launch the **User journey dialog**:
+
+<br />
+<div className="img">[TODO: Screenshot of **User journey dialog**]</div>
+
+We name our user journey `new_dog_owner` and add a brief description:
+
+<br />
+<div className="img">
+  [TODO: Screenshot of **User journey dialog** with fields filled out]
+</div>
+
+We will proceed to specify the **parts** that make up this user journey.
+
+Each discrete part of a user journey represents the potential for a **user interface**. We specify them in the form of **output matrices**. These are the templates from which NXTL ultimately produces **individualized user experiences** based on **user signals** and **retrieved data**.
+
+An **output matrix** template can target **any output that is expressible in text or code**. In our case, the artifacts we want to produce are websites, i.e. HTML code.
+
+We click **Add an output matrix**, which launches a separate dialog:
+
+<br />
+<div className="img">[TODO: Screenshot of **Output matrix dialog**]</div>
