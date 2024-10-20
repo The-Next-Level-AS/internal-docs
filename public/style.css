@@ -1,0 +1,53 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background: #70809080;
+}
+
+#log:not(:checked) ~ fieldset {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  opacity: 0.25;
+}
+
+td {
+  border: solid;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+main > fieldset {
+  border-style: dashed;
+}
+
+main > fieldset:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 2;
+  border-style: solid;
+}
+
+main > fieldset:nth-child(2) {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+main > fieldset:nth-child(3) {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+main > fieldset:nth-child(4) {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+main > fieldset:nth-child(5) {
+  grid-area: 3 / 1 / 4 / 3;
+}

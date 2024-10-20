@@ -18,6 +18,9 @@
   "apiReference": "API reference",
   "playground": {
     "title": "✨ Playground",
-    "type": "page"
+    "type": "page",
+    "theme": {
+      "layout": "full"
+    }
   }
 }
