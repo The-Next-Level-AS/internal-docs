@@ -1,7 +1,5 @@
 {
-  "generativeUI": "Generative UI",
-  "userJourney": "User Journey",
-  "signalling": "Signalling",
-  "outputMatrix": "Output Matrix",
-  "AIPrimitives": "AI Primitives"
+  "userJourneys": "User Journeys",
+  "matricesAndArtifacts": "Matrices & Artifacts",
+  "signals": "Signals"
 }

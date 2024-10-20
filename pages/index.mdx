@@ -1,24 +1,26 @@
-<h1
-  className="nx-flex nx-items-center nx-mt-2 nx-text-4xl nx-font-bold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100"
-  children={
-    <>
-      NXTL Documentation Portal
-      <img
-        src="/levels.png"
-        width="256"
-        style={{
-          marginLeft: "-50px",
-          filter:
-            "drop-shadow(0 2.5px 2px rgb(0 0 0 / 0.16)) drop-shadow(0 1px 0.75px rgb(0 0 0 / 0.4)) sepia(1) hue-rotate(11.25deg) drop-shadow(0 0 20px #fff000c0)",
-        }}
-      />
-    </>
-  }
-></h1>
+import { Cards } from "nextra/components";
+import { Callout } from "nextra/components";
 
-<br />
+<div className="banner">[TODO: Banner graphic]</div>
 
-This portal aims to provide all the resources you need to set up and run your own NXTL-powered experiences.
+**Welcome!** This portal aims to provide all the resources you need to set up and run your own **NXTL**-powered experiences.
+
+_Get to know the core concepts, and start your journey with NXTL:_
+
+<Cards>
+  <Cards.Card title="What is NXTL?" href="#what-is-nxtl" />
+  <Cards.Card title="What is Generative UI?" href="/whatIsGenerativeUI" />
+  <Cards.Card title="User Journeys" href="/concepts/userJourneys" />
+  <Cards.Card
+    title="Matrices & Artifacts"
+    href="/concepts/matricesAndArtifacts"
+  />
+  <Cards.Card title="Signals" href="/concepts/signals" />
+  <Cards.Card title="Installation" href="/installation" />
+  <Cards.Card title="Example: “Canine Cuisine”" href="/exampleCanineCuisine" />
+  <Cards.Card title="API reference" href="/apiReference" />
+  <Cards.Card title="Playground ✨" href="#" />
+</Cards>
 
 ## What is NXTL?
 
@@ -34,4 +36,10 @@ One could say that **digital inclusivity** is not provided in a meaningful sense
 
 **This is the problem we want to solve.**
 
-The NXTL platform offers a **level of abstraction** over digital user experiences, where **user journeys** are encapsulated in well-defined terms and instantiated as **individualized user experiences**, generated dynamically with the help of **artificial intelligence** (generative UI).
+The NXTL platform offers a **level of abstraction** over digital user experiences, where **user journeys** are encapsulated in well-defined terms and instantiated as **individualized user experiences**, generated dynamically with the help of **artificial intelligence**.
+
+NXTL is generative UI.
+
+<br />
+<br />
+<Cards.Card title="What is Generative UI?" href="/whatIsGenerativeUI" />

@@ -1,12 +1,23 @@
 {
-  "index": "Introduction",
-  "howItWorks": "How it works",
+  "index": {
+    "title": "Home",
+    "theme": {
+      "breadcrumb": false,
+      "pagination": false
+    }
+  },
+  "whatIsGenerativeUI": {
+    "title": "What is Generative UI?",
+    "theme": {
+      "breadcrumb": false
+    }
+  },
   "concepts": "Concepts",
-  "gettingStarted": "Getting started",
-  "examples": "Examples",
+  "installation": "Installation",
+  "exampleCanineCuisine": "Example: “Canine Cuisine”",
   "apiReference": "API reference",
-  "about": {
-    "title": "About",
+  "playground": {
+    "title": "✨ Playground",
     "type": "page"
   }
 }

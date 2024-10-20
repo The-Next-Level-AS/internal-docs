@@ -12,3 +12,17 @@
   white-space: pre-wrap;
   opacity: 0.5;
 }
+
+.banner {
+  background: #70809080;
+  border-radius: 8px;
+  width: 100%;
+  aspect-ratio: 16/4.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  white-space: pre-wrap;
+  opacity: 0.5;
+}
