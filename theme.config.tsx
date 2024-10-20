@@ -31,6 +31,8 @@ const config: DocsThemeConfig = {
       <title>NXTL Documentation Portal</title>
     </>
   ),
+  primaryHue: 50,
+  primarySaturation: 67,
 };
 
 export default config;

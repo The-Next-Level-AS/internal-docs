@@ -14,15 +14,24 @@
 }
 
 .banner {
-  background: #70809080;
+  background: url(/light-aluminum.png),
+    linear-gradient(67.5deg, #808080, #404040);
   border-radius: 8px;
   width: 100%;
-  aspect-ratio: 16/4.5;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   padding: 16px;
   text-align: center;
+  height: auto;
   white-space: pre-wrap;
-  opacity: 0.5;
+  overflow: hidden;
+  background-blend-mode: hard-light;
+  filter: sepia(1) hue-rotate(11.25deg);
+}
+
+.banner img {
+  width: 240px;
+  filter: saturate(0) drop-shadow(0 2.5px 2px rgb(0 0 0 / 0.16))
+    drop-shadow(0 1px 0.75px rgb(0 0 0 / 0.4)) drop-shadow(0 0 20px #fff000c0);
 }
