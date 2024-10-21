@@ -36,3 +36,11 @@
 article.nextra-body-typesetting-article a:hover {
   text-decoration: none !important;
 }
+
+html.light iframe {
+  mix-blend-mode: multiply;
+}
+
+html.dark iframe {
+  mix-blend-mode: screen;
+}
