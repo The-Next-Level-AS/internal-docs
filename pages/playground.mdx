@@ -9,7 +9,7 @@
     borderRadius: "8px",
   }}
   onLoad={(event) => {
-    let srcUpdated = false; // Flag to prevent infinite reloads
+    let srcUpdated = false;
     window.addEventListener("message", (_event) => {
       if (
         typeof _event.data === "string" &&
@@ -19,7 +19,7 @@
         const currentSrc = new URL(event.target.src);
         currentSrc.searchParams.set(
           "log",
-          currentSrc.searchParams.get("log") + _event.data.slice("nxtl_")[1]
+          currentSrc.searchParams.get("log") + _event.data.split("nxtl_")[1]
         );
         event.target.src = currentSrc.toString();
         srcUpdated = true;
