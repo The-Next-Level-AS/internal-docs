@@ -1,6 +1,6 @@
 <br />
 <iframe
-  src="https://playground-47d69.ondigitalocean.app?embed=true&embed_options=hide_loading_screen&embed_options=disable_scrolling&log=User is here"
+  src="https://playground-47d69.ondigitalocean.app?embed=true&embed_options=hide_loading_screen&embed_options=disable_scrolling&log=User entered"
   width="100%"
   style={{
     height: "75vh",
@@ -19,7 +19,9 @@
         const currentSrc = new URL(event.target.src);
         currentSrc.searchParams.set(
           "log",
-          currentSrc.searchParams.get("log") + _event.data.split("nxtl_")[1]
+          `${currentSrc.searchParams.get("log")}\n${
+            _event.data.split("nxtl_")[1]
+          }`
         );
         event.target.src = currentSrc.toString();
         srcUpdated = true;
