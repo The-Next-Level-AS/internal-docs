@@ -1,11 +1,29 @@
 <br />
 <iframe
-  src="https://playground-47d69.ondigitalocean.app?embed=true&embed_options=hide_loading_screen&embed_options=disable_scrolling"
+  src="https://playground-47d69.ondigitalocean.app?embed=true&embed_options=hide_loading_screen&embed_options=disable_scrolling&log=User is here"
   width="100%"
   style={{
     height: "75vh",
     minHeight: "1600px",
     filter: "brightness(0.96875)",
     borderRadius: "8px",
+  }}
+  onLoad={(event) => {
+    let srcUpdated = false; // Flag to prevent infinite reloads
+    window.addEventListener("message", (_event) => {
+      if (
+        typeof _event.data === "string" &&
+        _event.data.indexOf("nxtl_") === 0 &&
+        !srcUpdated
+      ) {
+        const currentSrc = new URL(event.target.src);
+        currentSrc.searchParams.set(
+          "log",
+          currentSrc.searchParams.get("log") + _event.data.slice("nxtl_")[1]
+        );
+        event.target.src = currentSrc.toString();
+        srcUpdated = true;
+      }
+    });
   }}
 />
