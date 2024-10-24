@@ -10,13 +10,14 @@ const PlaygroundSwitcher = () => {
       if (typeof data === "string" && data.indexOf("nxtl_") === 0) {
         const next =
             active === "A" ? playgrounds.B.current : playgrounds.A.current,
-          nextSrc = new URL(next.src);
+          nextSrc = new URL(next.src),
+          accumulated = new URL(
+            playgrounds[active].current.src
+          ).searchParams.get("log");
 
         nextSrc.searchParams.set(
           "log",
-          `${new URL(playgrounds[active].current.src).searchParams.get(
-            "log"
-          )}\n${data.split("nxtl_")[1]}`
+          `${accumulated ? `${accumulated}\n` : ""}${data.split("nxtl_")[1]}`
         );
         setActive(active === "A" ? "B" : "A");
         setStreamlitReady(false);
