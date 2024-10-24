@@ -3,29 +3,107 @@
   src="https://playground-47d69.ondigitalocean.app?embed=true&embed_options=hide_loading_screen&embed_options=disable_scrolling&log=User entered"
   width="100%"
   style={{
-    height: "75vh",
-    minHeight: "1600px",
+    height: "1600px",
     filter: "brightness(0.96875)",
     borderRadius: "8px",
   }}
+  id="playgroundA"
   onLoad={(event) => {
     let srcUpdated = false;
-    window.addEventListener("message", (_event) => {
-      if (
-        typeof _event.data === "string" &&
-        _event.data.indexOf("nxtl_") === 0 &&
-        !srcUpdated
-      ) {
-        const currentSrc = new URL(event.target.src);
-        currentSrc.searchParams.set(
-          "log",
-          `${currentSrc.searchParams.get("log")}\n${
-            _event.data.split("nxtl_")[1]
-          }`
-        );
-        event.target.src = currentSrc.toString();
-        srcUpdated = true;
-      }
-    });
+
+    if (window.visiblePlayground === "B") {
+      setTimeout(() => {
+        document.getElementById("playgroundA").style.opacity = "0";
+        document.getElementById("playgroundA").style.pointerEvents = "none";
+        document.getElementById("playgroundB").style.opacity = "1";
+        document.getElementById("playgroundB").style.pointerEvents = "initial";
+      }, 1000);
+    } else {
+      setTimeout(() => {
+        document.getElementById("playgroundB").style.opacity = "0";
+        document.getElementById("playgroundB").style.pointerEvents = "none";
+        document.getElementById("playgroundA").style.opacity = "1";
+        document.getElementById("playgroundA").style.pointerEvents = "initial";
+      }, 1000);
+
+      window.addEventListener("message", (_event) => {
+        if (
+          typeof _event.data === "string" &&
+          _event.data.indexOf("nxtl_") === 0 &&
+          !srcUpdated
+        ) {
+          const curr = document.getElementById("playgroundA"),
+            next = document.getElementById("playgroundB");
+
+          const currentSrc = new URL(curr.src);
+          const nextSrc = new URL(next.src);
+          nextSrc.searchParams.set(
+            "log",
+            `${currentSrc.searchParams.get("log")}\n${
+              _event.data.split("nxtl_")[1]
+            }`
+          );
+          window.visiblePlayground = "B";
+          next.src = nextSrc.toString();
+          srcUpdated = true;
+        }
+      });
+    }
+
+}}
+/>
+
+<iframe
+  src="https://playground-47d69.ondigitalocean.app?embed=true&embed_options=hide_loading_screen&embed_options=disable_scrolling&log=User entered"
+  width="100%"
+  style={{
+    height: "1600px",
+    marginTop: "-1600px",
+    filter: "brightness(0.96875)",
+    borderRadius: "8px",
   }}
+  id="playgroundB"
+  onLoad={(event) => {
+    let srcUpdated = false;
+
+    if (window.visiblePlayground === undefined || window.visiblePlayground === "A") {
+      setTimeout(() => {
+        document.getElementById("playgroundB").style.opacity = "0";
+        document.getElementById("playgroundB").style.pointerEvents = "none";
+        document.getElementById("playgroundA").style.opacity = "1";
+        document.getElementById("playgroundA").style.pointerEvents = "initial";
+      }, 1000);
+    } else {
+      setTimeout(() => {
+        document.getElementById("playgroundA").style.opacity = "0";
+        document.getElementById("playgroundA").style.pointerEvents = "none";
+        document.getElementById("playgroundB").style.opacity = "1";
+        document.getElementById("playgroundB").style.pointerEvents = "initial";
+      }, 1000);
+
+      window.addEventListener("message", (_event) => {
+        if (
+          typeof _event.data === "string" &&
+          _event.data.indexOf("nxtl_") === 0 &&
+          !srcUpdated
+        ) {
+          const curr = document.getElementById("playgroundB"),
+            next = document.getElementById("playgroundA");
+
+          const currentSrc = new URL(curr.src);
+          const nextSrc = new URL(next.src);
+          nextSrc.searchParams.set(
+            "log",
+            `${currentSrc.searchParams.get("log")}\n${
+              _event.data.split("nxtl_")[1]
+            }`
+          );
+          window.visiblePlayground = "A";
+          next.src = nextSrc.toString();
+          srcUpdated = true;
+        }
+      });
+    }
+
+}}
 />
