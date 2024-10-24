@@ -61,7 +61,7 @@ const PlaygroundSwitcher = () => {
         style={{
           height: "1600px",
           marginTop: "-1600px",
-          filter: "brightness(0.96875) sepia()",
+          filter: "brightness(0.96875)",
           borderRadius: "8px",
           opacity: "0",
         }}
