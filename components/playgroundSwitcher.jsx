@@ -7,7 +7,7 @@ const PlaygroundSwitcher = () => {
 
   useEffect(() => {
     const handleMessage = ({ data }) => {
-      if (typeof data === "string" && data.indexOf("nxtl_") === 0) {
+      if (typeof data === "string" && data.indexOf("nxtl__") === 0) {
         const next =
             active === "A" ? playgrounds.B.current : playgrounds.A.current,
           nextSrc = new URL(next.src),
@@ -17,10 +17,10 @@ const PlaygroundSwitcher = () => {
 
         nextSrc.searchParams.set(
           "log",
-          `${accumulated ? `${accumulated}\n` : ""}${data.split("_")[1]}`
+          `${accumulated ? `${accumulated}\n` : ""}${data.split("__")[1]}`
         );
-        nextSrc.searchParams.set("uj", data.split("_")[2]);
-        nextSrc.searchParams.set("m", data.split("_")[3]);
+        nextSrc.searchParams.set("uj", data.split("__")[2]);
+        nextSrc.searchParams.set("m", data.split("__")[3]);
         setActive(active === "A" ? "B" : "A");
         setStreamlitReady(false);
         next.src = nextSrc.toString();
