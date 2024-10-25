@@ -17,8 +17,9 @@ const PlaygroundSwitcher = () => {
 
         nextSrc.searchParams.set(
           "log",
-          `${accumulated ? `${accumulated}\n` : ""}${data.split("nxtl_")[1]}`
+          `${accumulated ? `${accumulated}\n` : ""}${data.split("_")[1]}`
         );
+        nextSrc.searchParams.set("uj", data.split("_")[2]);
         setActive(active === "A" ? "B" : "A");
         setStreamlitReady(false);
         next.src = nextSrc.toString();
