@@ -21,6 +21,7 @@ const PlaygroundSwitcher = () => {
         );
         nextSrc.searchParams.set("uj", data.split("__")[2]);
         nextSrc.searchParams.set("m", data.split("__")[3]);
+        nextSrc.searchParams.set("dq", data.split("__")[4]);
         setActive(active === "A" ? "B" : "A");
         setStreamlitReady(false);
         next.src = nextSrc.toString();
