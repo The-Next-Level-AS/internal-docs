@@ -28,7 +28,7 @@
 }
 
 [aria-roledescription="flowchart-v2"] {
-  filter: sepia(1) hue-rotate(168.75deg) saturate(0.5);
+  /* filter: sepia(1) hue-rotate(168.75deg) saturate(0.5); */
 }
 
 .banner img {

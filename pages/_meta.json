@@ -8,6 +8,13 @@
       "typesetting": "article"
     }
   },
+  "philosophy": {
+    "title": "Philosophy",
+    "theme": {
+      "breadcrumb": false,
+      "typesetting": "article"
+    }
+  },
   "status": {
     "title": "Status",
     "theme": {

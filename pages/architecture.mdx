@@ -1,51 +1,41 @@
-# Architecture
-
-<br />
-
 ```mermaid
-%%{init: {'theme':'neutral'}}%%
-graph LR;
-subgraph EEE [NXTL consumer]
-X[NXTL widget];
-W[Administrator];
+flowchart TD
+subgraph nxtl_consumer [<b>NXTL consumer</b>]
+  artifacts([Artifacts])
+  data_sources[Data sources]
+  matrices[Matrices]
 end
-Z[End user];
-subgraph FFF [NXTL platform]
-subgraph AAA [Appsmith]
-G[Back-office];
+subgraph nxtl_platform [<b>NXTL platform</b>]
+  text_generation[/GPU Text generation/]
+  subgraph digital_ocean [DigitalOcean]
+    api[API]
+    d{ }
+    text_embedding[/CPU Text embedding/]
+    storage[(Vector DB)]
+    cache[(Lookup table)]
+  end
+  subgraph github [GitHub]
+    source_code[Source code]
+    sdk[SDK]
+    ci_cd[CI/CD]
+  end
 end
-subgraph BBB [Amazon Web Services]
-D[Text generation];
+subgraph registry [<b>Registry</b>]
+  ecosystem([Library/plugin])
 end
-subgraph CCC [DigitalOcean]
-B[API];
-C[Cache];
-E[Text embedding];
-F[Vector database];
-H[Batch processing];
-I[Documentation portal];
-J[Playground];
-L[Internal documentation portal];
-M[Monitoring];
-end
-subgraph DDD [GitHub]
-K[Source code];
-Y[SDK];
-N[CI/CD];
-end
-end
-X --> B;
-B --> C;
-C --> D;
-C --> E;
-C --> F;
-G --> H;
-W --> G;
-H --> F;
-H --> E;
-G --> F;
-W --> I;
-I --> J;
-Z --> X;
-X --> Y;
+sdk --> ecosystem
+ecosystem --> matrices
+matrices --> api
+api --> storage
+d -- Prompts --> text_generation
+api --> text_embedding
+d --> cache
+api --> d
+text_generation -- Extrapolation --> cache
+text_embedding --> storage
+ci_cd --> digital_ocean
+source_code --> ci_cd
+data_sources -- Back-office --> text_embedding
+matrices --> artifacts
+artifacts -- Signals --> matrices
 ```
