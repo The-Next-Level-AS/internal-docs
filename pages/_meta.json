@@ -4,25 +4,43 @@
     "theme": {
       "breadcrumb": false,
       "pagination": false,
+      "timestamp": false,
       "typesetting": "article"
     }
   },
-  "whatIsGenerativeUI": {
-    "title": "What is Generative UI?",
+  "status": {
+    "title": "Status",
     "theme": {
       "breadcrumb": false,
       "typesetting": "article"
     }
   },
-  "concepts": "Core Concepts",
-  "installation": "Installation",
-  "exampleCanineCuisine": "Example: “Canine Cuisine”",
-  "apiReference": "API reference",
-  "playground": {
-    "title": "✨ Playground",
-    "type": "page",
+  "architecture": {
+    "title": "Architecture",
     "theme": {
-      "layout": "full"
+      "breadcrumb": false,
+      "typesetting": "article"
+    }
+  },
+  "source_control": {
+    "title": "Source Control",
+    "theme": {
+      "breadcrumb": false,
+      "typesetting": "article"
+    }
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "theme": {
+      "breadcrumb": false,
+      "typesetting": "article"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "theme": {
+      "breadcrumb": false,
+      "typesetting": "article"
     }
   }
 }

@@ -24,7 +24,11 @@
   white-space: pre-wrap;
   overflow: hidden;
   background-blend-mode: hard-light;
-  filter: sepia(1) hue-rotate(11.25deg);
+  filter: sepia(1) hue-rotate(168.75deg) saturate(0.5);
+}
+
+[aria-roledescription="flowchart-v2"] {
+  filter: sepia(1) hue-rotate(168.75deg) saturate(0.5);
 }
 
 .banner img {
