@@ -28,7 +28,8 @@
 }
 
 [aria-roledescription="flowchart-v2"] {
-  /* filter: sepia(1) hue-rotate(168.75deg) saturate(0.5); */
+  filter: brightness(0.67) contrast(1.75) sepia(1) hue-rotate(180deg)
+    saturate(0.25);
 }
 
 .banner img {
@@ -47,4 +48,26 @@ html.light iframe {
 
 html.dark iframe {
   mix-blend-mode: screen;
+}
+
+.katex-display {
+  opacity: 0.67;
+  float: left;
+  width: 50%;
+}
+
+.edgeLabel {
+  background-color: hsl(0, 0%, 98.9215686275%) !important;
+}
+
+@media screen and (max-width: 1023px) {
+  .katex-display {
+    float: none;
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .katex-html {
+    text-align: left;
+  }
 }

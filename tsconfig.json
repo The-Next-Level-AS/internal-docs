@@ -15,6 +15,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/playgroundSwitcher.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/playgroundSwitcher.jsx", "components/login.js"],
   "exclude": ["node_modules"]
 }

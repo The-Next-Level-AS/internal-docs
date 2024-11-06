@@ -4,11 +4,11 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 const config: DocsThemeConfig = {
   logo: (
     <svg
-      width="180.79401"
-      height="33.3744"
-      viewBox="0 0 2410.5867 444.992"
+      width="186"
+      height="33.374"
+      viewBox="0 0 2480.002 444.987"
       xmlns="http://www.w3.org/2000/svg"
-      style={{ overflow: "visible" }}
+      // style={{ overflow: "visible" }}
       className="nextra-content"
     >
       <path
