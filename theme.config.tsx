@@ -30,7 +30,7 @@ const config: DocsThemeConfig = {
   editLink: { component: () => null },
   head: (
     <>
-      <title>NXTL Documentation Portal</title>
+      <title>NXTL Internal Documentation Portal</title>
     </>
   ),
   primaryHue: 207.5,

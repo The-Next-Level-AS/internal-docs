@@ -28,6 +28,12 @@
       "breadcrumb": false
     }
   },
+  "prompt_engineering": {
+    "title": "Prompt engineering",
+    "theme": {
+      "breadcrumb": false
+    }
+  },
   "source_control": {
     "title": "Source Control",
     "theme": {
