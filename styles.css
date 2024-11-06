@@ -27,6 +27,19 @@
   filter: sepia(1) hue-rotate(168.75deg) saturate(0.5);
 }
 
+.signedIn {
+  align-self: start;
+  color: rgba(19, 24, 32, 0.75);
+  font-weight: 600;
+  text-shadow: rgba(255, 255, 255, 0.33) 1px 1px 1px;
+  text-align: left;
+  position: absolute;
+  font-size: 0.875rem;
+  left: 1.25rem;
+  width: 50%;
+  z-index: 1;
+}
+
 [aria-roledescription="flowchart-v2"] {
   filter: brightness(0.67) contrast(1.75) sepia(1) hue-rotate(180deg)
     saturate(0.25);
