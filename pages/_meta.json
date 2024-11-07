@@ -29,7 +29,7 @@
     }
   },
   "prompt_engineering": {
-    "title": "Prompt engineering",
+    "title": "Prompt Engineering",
     "theme": {
       "breadcrumb": false
     }
@@ -53,6 +53,12 @@
     "theme": {
       "breadcrumb": false,
       "typesetting": "article"
+    }
+  },
+  "pricing_models": {
+    "title": "Pricing Models",
+    "theme": {
+      "breadcrumb": false
     }
   },
   "docs": {
