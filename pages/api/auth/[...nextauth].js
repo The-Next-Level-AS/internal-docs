@@ -16,7 +16,7 @@ export const authOptions = {
         if (username === "per" && password === process.env.PER_PASSWORD) {
           return { id: 2, name: "Per", email: "per@nxtl.ai" };
         }
-        if (username === "per" && password === process.env.INGVAR_PASSWORD) {
+        if (username === "ingvar" && password === process.env.INGVAR_PASSWORD) {
           return { id: 3, name: "Ingvar", email: "ingvar@ring.no" };
         }
 
